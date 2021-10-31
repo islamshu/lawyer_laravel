@@ -24,6 +24,9 @@
                     <div class="card-header">
                         <h4 class="card-title">البيانات العامة</h4>
                     </div>
+                    @include('dashboard.partials.alerts.error')
+                    @include('dashboard.partials.alerts.success')
+      
                     <div class="card-content">
                         <div class="card-body">
                             <ul class="nav nav-tabs">
@@ -45,9 +48,7 @@
                                 </li>
                                
                             </ul>
-                            @include('dashboard.partials.alerts.error')
-                            @include('dashboard.partials.alerts.success')
-              
+                       
                             <form class="form" method="post" action="{{ route('general.store') }}" enctype="multipart/form-data">
                                 @csrf
                             <div class="tab-content px-1 pt-1">
@@ -58,14 +59,14 @@
                                     <div class="form-group">
                                         <div class="col-md-9">
                                           <label>title - {{ $lang }}</label>
-                                          <input type="text" name="{{ $lang }}[title]" class="form-control"  value="{{ $general->translate($lang)->title }}">
+                                          <input type="text" name="{{ $lang }}[title]" class="form-control"  value="{{ @$general->translate($lang)->title }}">
                                       </div>
                                     </div>
                                     <div class="form-group ">
                                         <label>description - {{ $lang }}</label>
                                         <div class="col-sm-9">
                                             <div class="position-relative has-icon-left">
-                                                <textarea class="ckeditor" name="{{ $lang }}[decription]">{{ $general->translate($lang)->decription }}</textarea>
+                                                <textarea class="ckeditor" name="{{ $lang }}[decription]">{{ @$general->translate($lang)->decription }}</textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -80,7 +81,7 @@
                                           <input type="file" name="header_logo" class="form-control image header_logo" >
                                         </div>
                                       <div class="col-md-2">
-                                        <img   style="width: 100px" src="{{ asset('uploads/'.$general->header_logo) }}" class="img-thumbnail image-preview" data-preview="header_logo" alt="">
+                                        <img   style="width: 100px" src="{{ asset('uploads/'.@$general->header_logo) }}" class="img-thumbnail image-preview" data-preview="header_logo" alt="">
                                     </div>
                                     </div>
                                     <div class="row">
@@ -89,7 +90,7 @@
                                           <input type="file" name="footer_logo" class="form-control image footer_logo" >
                                         </div>
                                       <div class="col-md-2">
-                                        <img   style="width: 100px" src="{{ asset('uploads/'.$general->footer_logo) }}" class="img-thumbnail image-preview" data-preview="footer_logo" alt="">
+                                        <img   style="width: 100px" src="{{ asset('uploads/'.@$general->footer_logo) }}" class="img-thumbnail image-preview" data-preview="footer_logo" alt="">
 
                                     </div>
                                     </div>
@@ -99,7 +100,7 @@
                                           <input type="file" name="icon" class="form-control image icon" >
                                         </div>
                                       <div class="col-md-2">
-                                        <img   style="width: 100px" src="{{ asset('uploads/'.$general->icon) }}" class="img-thumbnail image-preview" data-preview="icon" alt="">
+                                        <img   style="width: 100px" src="{{ asset('uploads/'.@$general->icon) }}" class="img-thumbnail image-preview" data-preview="icon" alt="">
                                     </div>
                                     </div>
                                 </div>
@@ -107,44 +108,44 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>email</label>
-                                          <input type="email" name="email" value="{{ $general->email }}"  class="form-control " >
+                                          <input type="email" name="email" value="{{ @$general->email }}"  class="form-control " >
                                         </div>
                                    
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>phone</label>
-                                          <input type="number" name="phone" value="{{ $general->phone }}" class="form-control " >
+                                          <input type="number" name="phone" value="{{ @$general->phone }}" class="form-control " >
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>whatsapp</label>
-                                          <input type="text" name="whatsapp" value="{{ $general->whatsapp }}" class="form-control " >
+                                          <input type="text" name="whatsapp" value="{{ @$general->whatsapp }}" class="form-control " >
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>facebook</label>
-                                          <input type="text" name="facebook" value="{{ $general->facebook }}" class="form-control " >
+                                          <input type="text" name="facebook" value="{{ @$general->facebook }}" class="form-control " >
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>twitter</label>
-                                          <input type="text" name="twitter" value="{{ $general->twitter }}" class="form-control " >
+                                          <input type="text" name="twitter" value="{{ @$general->twitter }}" class="form-control " >
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>tiktok</label>
-                                          <input type="text" name="tiktok" value="{{ $general->tiktok }}" class="form-control " >
+                                          <input type="text" name="tiktok" value="{{ @$general->tiktok }}" class="form-control " >
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
                                           <label>snapchat</label>
-                                          <input type="text" name="snapchat" value="{{ $general->snapchat }}" class="form-control " >
+                                          <input type="text" name="snapchat" value="{{ @$general->snapchat }}" class="form-control " >
                                         </div>
                                     </div>
                                     
