@@ -40,10 +40,8 @@ class GeneralController extends Controller
             $request_all['icon'] = $request->icon->store('general');
         }
         $request->validate($rules);  
-        // $general =General::first();
 
-        // $general->update($request_all);
-        General::create($request_all);
+        $general->update($request_all);
         return redirect()->back()->with(['success'=>'تم التعديل بنجاح']);
 
     

@@ -59,14 +59,14 @@
                                     <div class="form-group">
                                         <div class="col-md-9">
                                           <label>title - {{ $lang }}</label>
-                                          <input type="text" name="{{ $lang }}[title]" class="form-control" ">
+                                          <input type="text" name="{{ $lang }}[title]" class="form-control"  value="{{ @$general->translate($lang)->title }}">
                                       </div>
                                     </div>
                                     <div class="form-group ">
                                         <label>description - {{ $lang }}</label>
                                         <div class="col-sm-9">
                                             <div class="position-relative has-icon-left">
-                                                <textarea class="ckeditor" name="{{ $lang }}[decription]"></textarea>
+                                                <textarea class="ckeditor" name="{{ $lang }}[decription]">{{ @$general->translate($lang)->decription }}</textarea>
                                             </div>
                                         </div>
                                     </div>
