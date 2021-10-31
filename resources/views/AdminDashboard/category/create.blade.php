@@ -54,12 +54,14 @@
                             </div>
                           </div>
                         @endforeach
+
                   <div class="form-actions left">
                     
                     <button type="submit" class="btn btn-primary">
                       <i class="la la-check-square-o"></i> Save
                     </button>
                   </div>
+                </div>
               </form>
             </div>
           </div>

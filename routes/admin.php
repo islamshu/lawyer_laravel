@@ -10,7 +10,9 @@ Route::middleware('auth:admin')->group(function () {
     Route::resource('categories', 'CategoryController');
     Route::resource('lawyers', 'LawyerController');
     Route::resource('services', 'ServiceController');
+    Route::resource('general', 'GeneralController');
     Route::get('lawyers_update_live', 'LawyerController@updateStatus')->name('lawyer_id.update.live');
+    
     Route::get('logout','AdminController@logout')->name('admin.logout');
 });
 
