@@ -1,6 +1,11 @@
 <div class="main-menu menu-static menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+
+        
+        <li class=" nav-item"><a href="{{ route('general.index') }}"><i class="la la-users"></i><span class="menu-title" data-i18n="nav.dash.main">البيانات العامة</span></a>
+       
+        </li>
         <li class=" nav-item"><a href="index.html"><i class="la la-users"></i><span class="menu-title" data-i18n="nav.dash.main">الإداريين</span></a>
           <ul class="menu-content">
             <li ><a class="menu-item" href="{{ route('admins.index') }}" data-i18n="nav.dash.ecommerce">جميع الاإداريين</a>
