@@ -11,6 +11,15 @@ Route::middleware('auth:admin')->group(function () {
     Route::resource('lawyers', 'LawyerController');
     Route::resource('services', 'ServiceController');
     Route::resource('general', 'GeneralController');
+    Route::resource('sliders', 'SliderController');
+    Route::resource('frontservice', 'FrontserviceController');
+    Route::resource('founder', 'FounderController');
+    Route::resource('partners', 'PartnerController');
+    Route::resource('team', 'TeamController');
+    Route::resource('rate', 'RateController');
+
+
+
     Route::get('lawyers_update_live', 'LawyerController@updateStatus')->name('lawyer_id.update.live');
     
     Route::get('logout','AdminController@logout')->name('admin.logout');
